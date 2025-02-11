@@ -1,8 +1,7 @@
 {
   plugins = {
-    copilot-chat = {
-      enable = true;
-    };
+    copilot-chat.enable = true;
+    copilot-lua.enable = true;
   };
 
   keymaps = [
