@@ -18,6 +18,10 @@
         goimports.enable = true;
         treefmt.enable = true;
         ktlint.enable = true;
+        prettier = {
+          enable = true;
+          disableTsServerFormatter = true;
+        };
       };
     };
   };
