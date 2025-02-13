@@ -1,7 +1,20 @@
 {
   plugins = {
-    copilot-chat.enable = true;
-    copilot-lua.enable = true;
+    copilot-chat = {
+      enable = true;
+      settings = {
+        model = "claude-3.5-sonnet";
+        prompts = {
+          Review = "Please provide me with tips or recommendations on how to improve the code. Do not provide a full revised version of the code. At most, only provide snippets to show how to implement the tips.";
+        };
+      };
+    };
+    copilot-lua = {
+      enable = true;
+      settings = {
+        auto_trigger = false;
+      };
+    };
   };
 
   keymaps = [
