@@ -9,10 +9,12 @@
         cssls.enable = true;
         nixd = {
           enable = true;
-          settings.options = {
-            home_manager.expr = ''
-              let configs = (builtins.getFlake ("git+file://" + builtins.toString ./.)).homeConfigurations; in (builtins.head (builtins.attrValues configs)).options
-            '';
+          settings = {
+            nixpkgs.expr = "import <nixpkgs> {}";
+            options = {
+              nixos.expr = ''(builtins.getFlake "/home/alex/.nixfiles").nixosConfigurations.work.options'';
+              home_manager.expr = ''(builtins.getFlake "/home/alex/.nixfiles").homeConfigurations."alex@work".options'';
+            };
           };
         };
         statix = {
