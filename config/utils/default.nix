@@ -5,4 +5,6 @@
     ./undotree.nix
     ./whichkey.nix
   ];
+
+  plugins.tmux-navigator.enable = true;
 }
