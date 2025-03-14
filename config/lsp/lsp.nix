@@ -30,6 +30,7 @@
         tailwindcss.enable = true;
         eslint.enable = true;
         html.enable = true;
+        pylsp.enable = true;
       };
       keymaps = {
         silent = true;
